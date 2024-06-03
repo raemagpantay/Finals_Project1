@@ -24,7 +24,7 @@
             background-color: rgba(95, 92, 92, 0.356);
             color: #fff;
             position: absolute;
-            top: -300px;
+            top: -600px;
             right: 0;
             margin: 10px;
         }
@@ -55,11 +55,17 @@
             bottom: 0;
             width: 100%;
         }
+        h2{
+            text-align: center;
+        }
+        div{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Simple Website</h1>
+        <h1>SignUp</h1>
     </header>
     <nav>
         <a href="file:///C:/Users/StrwbryBagel/Desktop/rae/school/codes/Labcode-try/About.html">About</a>
@@ -67,8 +73,25 @@
         <a href="file:///C:/Users/StrwbryBagel/Desktop/rae/school/codes/Labcode-try/Contact.html">Contact</a>
     </nav>
     <main>
-        <h2>Main Content</h2>
-        <p>This is the main content of the website. You can add more content here.</p>
+        <h2>Create a new account!</h2>
+    <div>
+        <p>Already Registered? <a href="#">LogIn</a></p>
+        <p>NAME</p>
+        <input type="text"/>
+        <p>EMAIL</p>
+        <input type="email" name="" id="">
+        <p>PASSWORD</p>
+        <input type="password"/>
+        <p>DATE OF BIRTH</p>
+        <input type="date"/>
+        <br><br>
+    </div>
+    <div class="signInContainer">
+        <button class="SignIn">SIGN UP</button>
+        
+    </div>
+
+    
     </main>
     <div class="container">
         <button class="go-back" onclick="windows.history.back()">Go Back</button>
