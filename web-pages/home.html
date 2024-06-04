@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finals_Project</title>
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
@@ -14,6 +15,7 @@
             margin: 0;
             padding: 0;
             background-color: #fbf8f3;
+            display: flex;
         }
         header {
             background-color: #232323;
@@ -46,7 +48,7 @@
         }
         .halukay{
             text-align: left;
-            font-family: "Nothing You Could Do";
+            font-family: "Nothing You Could Do", sans-serif;
             font-weight: 400;
             font-style: normal; 
         }
@@ -90,43 +92,35 @@
             "YTUC" 712;
         }
         .container-slider{
+            position: relative;
+            width: 100%;
+            overflow: hidden;
             padding: 2rem;
         }
         .slider-wrapper{
-            position: relative;
-            max-width: 48rem;
-            margin: 0 auto;
-        }
-        .slider{
             display: flex;
-            aspect-ratio: 16/9;
-            overflow-x: hidden;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-            box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-            border-radius: 0.5rem;
+            flex-shrink: 0;
         }
         .slider img{
-            flex: 1 0 100%;
-            scroll-snap-align: start;
-            object-fit: cover;
+            width: 100%;
+            flex-shrink:0;
         }
         .slider-nav{
-            display: flex;
-            column-gap: 1rem;
             position: absolute;
-            bottom: 1.25rem;
+            bottom: 10px;
             left: 50%;
-            transform: translate(-50%);
-            z-index: 1;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
         }
         .slider-nav a{
-            width: 0.5rem;
-            height: 0.5rem;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             border-color: #fff;
-            opacity: 0.75;
-            transition: opacity ease 250ms;
+            border-radius: 50%;
+            display: block;
+            text-indent: -9999px;
         }
         .slider-nav a:hover{
             opacity: 1;
@@ -160,9 +154,28 @@
         }
     </style>
     <!--JavaScript Section-->
-            <script>
-
-            </script>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slider img');
+        const totalSlides = slides.length;
+    
+        function showNextSlide() {
+            currentIndex++;
+            if (currentIndex >= totalSlides) {
+                currentIndex = 0;
+            }
+            updateSlider();
+        }
+    
+        function updateSlider() {
+            const sliderWrapper = document.querySelector('.slider-wrapper');
+            const newTransform = -currentIndex * 100;
+            sliderWrapper.style.transform = `translateX(${newTransform}%)`;
+        }
+    
+        setInterval(showNextSlide, 3000); // Change image every 3 seconds
+    </script>
+    
     <!--End of JavaScript-->
 </head>
 <body>
@@ -183,18 +196,21 @@
         <section class="container-slider">
             <div class="slider-wrapper">
                 <div class="slider">
-                    <img id="slide-1" src="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\images\front-shirt-model.png" alt="3D rendering of a black front-shirt-model">
+                    <img id="slide-1" src="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\images\model-with-black-t-shirt.png" alt="3D rendering of a black front-shirt-model">
                     <img id="slide-2" src="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\images\front-jacket-model.png" alt="3D rendering of a black front-jacket-model">
                     <img id="slide-3" src="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\images\front-hoodie-model.png" alt="3D rendering of a black front-hoodie-model">
+                    <img id="slide-3" src="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\images\hoody-for-men-sweatshirt.png" alt="3D rending of a vanila hoody-for-men-sweatshirt">
                 </div>
             </div>
-            <div class="slider-nav">
-                <a href="slider-1"></a>
-                <a href="slider-2"></a>
-                <a href="slider-3"></a>
+                <div class="slider-nav">
+                        <a href="slider-1"> </a>
+                        <a href="slider-2"> </a>
+                        <a href="slider-3"> </a>
+                </div>
+<!--__________________________________________________________________________________________________________________________________________________-->
 
-    <!--additional content-->                
-            </div>
+                
+            <!--additional content-->  
                 <div class="50-OFF">
                     <h1>50% OFF</h1>
                 </div class="50-OFF-content">
