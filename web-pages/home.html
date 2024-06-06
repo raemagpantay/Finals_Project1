@@ -41,7 +41,7 @@
         }
         main {
             padding: 20px;
-            width: 80%;
+            width: 100%;
             margin: 0 auto;
             font-family: "Roboto Flex", sans-serif;
             font-weight: 300;
@@ -53,7 +53,6 @@
             background-repeat: no-repeat;
             background-position: center;
             flex-grow: 1;
-            margin: 0;
         }
         .container-slider {
             position: relative;
@@ -92,8 +91,9 @@
             display: block;
             text-indent: -9999px;
             opacity: 0.5;
+            cursor: pointer;
         }
-        .slider-nav a:hover {
+        .slider-nav a.active {
             opacity: 1;
         }
         h1 {
@@ -119,17 +119,13 @@
             border-radius: 5px;
             cursor: pointer;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            -webkit-transition-duration: 0.03s;
             transition-duration: 0.3s;
-            -webkit-transition-property: box-shadow, transform;
             transition-property: box-shadow, transform;
             border: 0;
         }
         .now:hover, .now:focus, .btn:active{
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            -webkit-transform: scale(1.1);
             transform: scale(1.1);
-
         }
         footer {
             background-color: #333;
@@ -190,10 +186,10 @@
                 </div>
             </div>
             <div class="slider-nav">
-                <a href="#slide-1"></a>
-                <a href="#slide-2"></a>
-                <a href="#slide-3"></a>
-                <a href="#slide-4"></a>
+                <a href="#slide-1" data-slide="0"></a>
+                <a href="#slide-2" data-slide="1"></a>
+                <a href="#slide-3" data-slide="2"></a>
+                <a href="#slide-4" data-slide="3"></a>
             </div>
         </section>
     </main>
@@ -211,20 +207,23 @@
                 <a href="#">Links</a>
             </div>
             <div class="About">
-                <a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\about.html">About Us</a>
+                <a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\about.html">About Us</a>
             </div>
         </nav>
         <p>Follow us on Instagram: <a href="https://www.instagram.com/raeee_arashi/">raee_arashi</a>, <a href="https://www.instagram.com/raeee_arashi/">KarlSantiago</a></p>
         <p>Email us at: magpantay.raealjon@gmail.com</p>
-        <p>Message us on Facebook: <a href="https://www.facebook.com/arashiii2003/">Rae Aljon Magpantay</a></p>
+        <p>Message us on Facebook: <a href="https://www.facebook.com/arashiii2003/">Rae Aljon Magpantay</a>,
+            <a href="https://www.facebook.com/KarlSantiagoo">Karl Santiago</a></p>
     </footer>
-</body>
+
     <!--JavaScript Section-->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             let currentIndex = 0;
-            const slides = document.querySelectorAll('.slider img');
+            const slides = document.querySelectorAll('.slider');
             const totalSlides = slides.length;
+            const navLinks = document.querySelectorAll('.slider-nav a');
+            let autoPlayInterval = setInterval(showNextSlide, 3000); // Change image every 3 seconds
 
             function showNextSlide() {
                 currentIndex++;
@@ -238,9 +237,22 @@
                 const sliderWrapper = document.querySelector('.slider-wrapper');
                 const newTransform = -currentIndex * 100;
                 sliderWrapper.style.transform = `translateX(${newTransform}%)`;
+                navLinks.forEach((link, index) => {
+                    link.classList.toggle('active', index === currentIndex);
+                });
             }
 
-            setInterval(showNextSlide, 3000); // Change image every 3 seconds
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    currentIndex = parseInt(this.getAttribute('data-slide'));
+                    clearInterval(autoPlayInterval); // Stop auto-play when a manual navigation is used
+                    updateSlider();
+                    autoPlayInterval = setInterval(showNextSlide, 3000); // Restart auto-play
+                });
+            });
+
+            updateSlider();
         });
     </script>
     <!--End of JavaScript-->
