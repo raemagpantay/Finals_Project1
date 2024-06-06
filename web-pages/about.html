@@ -1,11 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .container {
+        position: relative;
+        height: 100vh; 
+        width: 100%; 
+        }
+        .go-back{
+            background-color: rgba(95, 92, 92, 0.356);
+            color: #fff;
+            position: absolute;
+            top: -300px;
+            right: 0;
+            margin: 10px;
+        }
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        main {
+            padding: 20px;
+            width: 80%;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <h1>ABOUT US</h1>
+    </header>
+    <nav>
+        <a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\home.html">HALUKAY</a>
+        <a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\Shop.html">Shop</a>
+        <a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\contact.html">Contact</a>
+    </nav>
+    <main>
+        <h2>Main Content</h2>
+        <p>This is the main content of the website. You can add more content here.</p>
+    </main>
+    <div class="container">
+        <button class="go-back" onclick="windows.history.back()">Go Back</button>
+    </div>
+    <footer>
+        <p>2024 Simple Website</p>
+        <p>Rae Aljon Magpantay</p>
+        <p>BSCS 221M1<br>Lab Exam</p>
+    </footer>
 </body>
 </html>
