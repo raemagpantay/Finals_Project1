@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finals_Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>        
     body {
         font-family: Arial, sans-serif;
@@ -18,9 +19,7 @@
         text-align: center;
     }
     .container {
-    position: relative;
-    height: 100vh; 
-    width: 100%; 
+    height: 120px;
     }
     .go-back{
         background-color: rgba(95, 92, 92, 0.356);
@@ -47,11 +46,9 @@
         padding: 20px;
         width: 80%;
         margin: 0 auto;
+        padding-bottom: 0;
     }
     h2{
-        text-align: center;
-    }
-    div{
         text-align: center;
     }
     .login{
@@ -74,14 +71,118 @@
     }
     .name{
     }
-    footer {
-        background-color: #333;
-        color: #fff;
+    div{
+        text-align: center;
+    }
+    footer{
+        background: #232323;
+        padding-top: 15px;
+    }
+    footer a{
+        color: #fbf8f3;
+    }
+    .footer-container{
+        width: 1140px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .footer-content{
+        width: 33.3%;
+    }
+    h3{
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #fbf8f3;
+    }
+    .magpantay{
+        font-size: 18px;
+        margin-bottom: 15px;
+        margin-top: 0;
+        text-align: center;
+        color: #fbf8f3;
+        padding-top: 12px;
+    }
+    .santiago{
+        font-size: 18px;
+        margin-bottom: 15px;
+        margin-top: 0;
+        text-align: center;
+        color: #fbf8f3;
+    }
+    .footer-content p{
+        width:190px;
+        margin: auto;
+        padding: 7px;
+    }
+    .footer-content ul{
+        text-align: center;
+    }
+    .contact{
+        color: #fbf8f3;
+    }
+    .list{
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    .list a{
+
+    }
+    .list li{
+        width: auto;
+        text-align: center;
+        list-style-type:none;
+        padding: 7px;
+        position: relative;
+    }
+    .list li::before{
+        content: '';
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background: #f18930;
+        transition-duration: .5s;
+    }
+    .list li:hover::before{
+        width: 70px;
+    }
+    .social-icons{
+        text-align: center;
+        padding: 0;
+    }
+    .social-icons li{
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+    }
+    .social-icons i{
+        color: #fbf8f3;
+        font-size: 25px;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        color: #f18930;
+    }
+    .social-icons i:hover{
+        color: #f18930;
+    }
+    .bottom-bar{
+        background: #f18930;
         text-align: center;
         padding: 10px 0;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
+        margin-top: 50px;
+    }
+    .bottom-bar p{
+        color: #343434;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
     }
     </style>
 </head>
