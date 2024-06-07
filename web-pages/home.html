@@ -128,13 +128,6 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             transform: scale(1.1);
         }
-        footer {
-            background-color: #333;
-            color: #fbf8f3;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: auto;
-        }
         .go-back {
             background-color: rgba(95, 92, 92, 0.356);
             color: #fbf8f3;
@@ -149,7 +142,96 @@
             text-align: center;
             margin: 2rem 90px;
             background-image: url('C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\images\halukay-logo.png');
-        }
+    }
+    footer{
+        background: #232323;
+        padding-top: 50px;
+    }
+    .footer-container{
+        width: 1140px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .footer-content{
+        width: 33.3%;
+    }
+    h3{
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #fbf8f3;
+    }
+    .footer-content p{
+        width:190px;
+        margin: auto;
+        padding: 7px;
+    }
+    .footer-content ul{
+        text-align: center;
+    }
+    .contact{
+        color: #fbf8f3;
+    }
+    .list{
+        padding: 0;
+        text-decoration-color: #fbf8f3;
+    }
+    .list li{
+        width: auto;
+        text-align: center;
+        list-style-type:none;
+        padding: 7px;
+        position: relative;
+    }
+    .list li::before{
+        content: '';
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background: #f18930;
+        transition-duration: .5s;
+    }
+    .list li:hover::before{
+        width: 70px;
+    }
+    .social-icons{
+        text-align: center;
+        padding: 0;
+    }
+    .social-icons li{
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+    }
+    .social-icons i{
+        color: #fbf8f3;
+        font-size: 25px;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        color: #f18930;
+    }
+    .social-icons i:hover{
+        color: #f18930;
+    }
+    .bottom-bar{
+        background: #f18930;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+    .bottom-bar p{
+        color: #343434;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+    }
     </style>
 </head>
 <body>
@@ -201,21 +283,36 @@
 
     <!--End of slide show-->
     <footer>
-        <nav>
-            <div class="Contacts">
-                <a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\contact.html">Contacts</a>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p class="contact">Email:Info@example.com</p>
+                <p class="contact">Phone:+121 56556 565556</p>
+                <p class="contact">Address:Your Address 123 street</p>
             </div>
-            <div class="Links">
-                <a href="#">Links</a>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                 <ul class="list">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Contact</a></li>
+                 </ul>
             </div>
-            <div class="About">
-                <a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\about.html">About Us</a>
-            </div>
-        </nav>
-        <p>Follow us on Instagram: <a href="https://www.instagram.com/raeee_arashi/">raee_arashi</a>, <a href="https://www.instagram.com/raeee_arashi/">KarlSantiago</a></p>
-        <p>Email us at: magpantay.raealjon@gmail.com</p>
-        <p>Message us on Facebook: <a href="https://www.facebook.com/arashiii2003/">Rae Aljon Magpantay</a>,
-            <a href="https://www.facebook.com/KarlSantiagoo">Karl Santiago</a></p>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                 <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                 <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                 <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                 <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+                </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2023 designed by Magpantay Rae Aljon & Santiago, Karl. All rights reserved</p>
+        </div>
     </footer>
 
     <!--JavaScript Section-->
