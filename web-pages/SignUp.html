@@ -14,20 +14,26 @@
             color: #fbf8f3;
             padding: 10px 0;
         }
+        .halukay{
+            font-size: 20px;
+            font-weight: 800px;
+        }
         h1{
             color: floralwhite;
         }
         .container{
-            background-image: url('C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/images/Hexagon-dotted-connect-line-background-rotated.jpg');
-            background-size: cover;
+            padding: 35px;
+            margin: 0;
+            background-image: url('C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/images/halukay-logo.png');
+            background-size: 800px;
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: left;
         }
         #form {
     width: 300px;
     margin: 20vh auto 0 auto;
     padding: 50px;
-    background: linear-gradient(to right, #7acef1, #63d0f5, #2fb8f3);
+    background: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
     border-radius: 5px;
     font-size: 15px;
     padding-bottom: 80px;
@@ -37,7 +43,7 @@
     }
 
     #form h1 {
-    color: #fbf8f3;
+    color: #232323;
     text-align: center;
 }
 
@@ -50,11 +56,17 @@
     border: none;
     border-radius: 4px;
 }
+.SignIn{
+    margin-left: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
     .input-control {
     display: flex;
     flex-direction: column;
     color: #232323;
+    font-size: 15px;
+    font-weight: 50px;
 }
 
     .input-control input {
@@ -83,39 +95,33 @@
     font-size: 9px;
     height: 13px;
 }
-    .back-container {
-        height: 50px;
-}
-    .go-back{
-    background-color: rgba(95, 92, 92, 0.356);
-    color: #fff;
-    position: absolute;
-    top: -550px;
-    right: 0;
-    margin: 10px;
-}
     main {
-    padding: 20px;
-    width: 80%;
+    padding: 0;
     margin: 0 auto;
+    background-image: url('C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/images/Hexagon-dotted-connect-line-background-rotated.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
 }
-    .go-back {
-    background-color: rgba(95, 92, 92, 0.356);
-    color: #fbf8f3;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-    h2{
-    text-align: center;
-}
+    header{
+        padding: 20px;
+    }
     div{
     text-align: center;
 }
-        
+
+            /* go-back button */
+            .go-back {
+            background-color: rgba(95, 92, 92, 0.356);
+            color: #fbf8f3;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            }
+
         /* footer section */
         footer{
         background: #232323;
@@ -168,9 +174,6 @@
         .list{
             padding: 0;
             font-family: Arial, sans-serif;
-        }
-        .list a{
-
         }
         .list li{
             width: auto;
@@ -230,7 +233,13 @@
     </style>
 </head>
 <body>
+    <main>
     <header>
+        <p class="halukay">HALUKAY</p>
+    </header>
+        <div class="logo">
+    
+        </div>
         <div class="container">
             <form id="form" action="/">
                 <h1>Registration</h1>
@@ -259,10 +268,9 @@
             </form>
         </div>
     </main>
+
 <!-- go-back button -->
-    <div class="back-container">
-        <button class="go-back" onclick="windows.history.back()">Go Back</button>
-    </div>
+            <button class="go-back" onclick="window.history.back()">Go Back</button>
 
     <!-- footer section -->
     <footer>
@@ -301,7 +309,7 @@
                 </ul>
                 </div>
         </div>
-        <!--  -->
+        <!-- copyrights -->
         <div class="bottom-bar">
             <p>&copy; 2023 designed by Magpantay Rae Aljon & Santiago, Karl. All rights reserved</p>
         </div>

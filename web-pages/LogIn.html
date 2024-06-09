@@ -69,7 +69,9 @@
             transition-property: box-shadow, transform;
             border: 0;
     }
-    .go-back {
+
+    /* go-back button */
+        .go-back {
             background-color: rgba(95, 92, 92, 0.356);
             color: #fbf8f3;
             position: absolute;
@@ -78,9 +80,8 @@
             padding: 10px;
             border: none;
             cursor: pointer;
-    }
-    .name{
-    }
+            }
+
     div{
         text-align: center;
     }
@@ -135,9 +136,6 @@
     .list{
         padding: 0;
         font-family: Arial, sans-serif;
-    }
-    .list a{
-
     }
     .list li{
         width: auto;
@@ -204,10 +202,16 @@
         <h2>LogIn your account!</h2>
     <div>
         <p>Don't have an account?<a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\SignUp.html">Sign In</a></p>
-        <p class="name">NAME</p>
-        <input type="text"/>
-        <p>PASSWORD</p>
-        <input type="password"/>
+        <div class="input-control">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text">
+            <div class="error"></div>
+            </div>
+        <div class="input-control">
+            <label for="password">Password</label>
+            <input id="password"name="password" type="password">
+            <div class="error"></div>
+            </div>
         <br><br>
     </div>
     <div class="signInContainer">
