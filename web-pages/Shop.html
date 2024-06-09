@@ -16,6 +16,21 @@
             padding: 20px 0;
             text-align: center;
         }
+        main{
+            padding: 20px;
+            width: 100%;
+            margin: 0 auto;
+            font-family: "Roboto Flex", sans-serif;
+            font-weight: 300;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            background-image: url('C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/images/Hexagon-dotted-connect-line-background-rotated.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            flex-grow: 1;
+        }
         .container {
         position: relative;
         height: 100vh; 
@@ -42,10 +57,15 @@
         nav a:hover {
             background-color: #555;
         }
-        main {
-            padding: 20px;
-            width: 80%;
-            margin: 0 auto;
+        .shoplist{
+            padding: 150px;
+            margin: 0;
+            background-image: url('C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/images/halukay-logo.png');
+            background-size: 700px;
+            background-repeat: no-repeat;
+            background-position-x: 100px;
+            background-position-y: 100px;
+            flex: 1;
         }
         footer{
         background: #232323;
@@ -98,9 +118,6 @@
     .list{
         padding: 0;
         font-family: Arial, sans-serif;
-    }
-    .list a{
-
     }
     .list li{
         width: auto;
@@ -169,12 +186,13 @@
         <a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\LogIn.html">LOGIN</a>
     </nav>
     <main>
-        <h2>Main Content</h2>
-        <p>This is the main content of the website. You can add more content here.</p>
+        <div class="shoplist">
+            <h2>Main Content</h2>
+            <p>This is the main content of the website. You can add more content here.</p>
+        </div>
     </main>
-    <div class="container">
         <button class="go-back" onclick="windows.history.back()">Go Back</button>
-    </div>
+
     <footer>
         <div class="footer-container">
             <div class="footer-content">

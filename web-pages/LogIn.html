@@ -18,9 +18,6 @@
         padding: 20px 0;
         text-align: center;
     }
-    .container {
-    height: 120px;
-    }
     .go-back{
         background-color: rgba(95, 92, 92, 0.356);
         color: #fff;
@@ -43,14 +40,75 @@
         background-color: #555;
     }
     main {
-        padding: 20px;
-        width: 80%;
+        padding: 0;
         margin: 0 auto;
-        padding-bottom: 0;
-    }
-    h2{
+        background-image: url('C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/images/Hexagon-dotted-connect-line-background-rotated.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .container{
+            padding: 35px;
+            margin: 0;
+            background-image: url('C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/images/halukay-logo.png');
+            background-size: 800px;
+            background-repeat: no-repeat;
+            background-position: left;
+        }
+        #form {
+            width: 300px;
+            margin: 20vh auto 0 auto;
+            padding: 50px;
+            background: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+            border-radius: 5px;
+            font-size: 15px;
+            padding-bottom: 80px;
+            padding-top: 200px;
+            margin-top: 0;
+        }
+        #form h2{
+        color: #232323;
         text-align: center;
-    }
+        font-size: italic;
+        }
+        h2 {
+            text-align: center;
+            font-size: italic;  
+        }
+        .input-control {
+    display: flex;
+    flex-direction: column;
+    color: #232323;
+    font-size: 15px;
+    font-weight: 50px;
+}
+
+    .input-control input {
+    border: 2px solid #fbf8f3;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 10px;
+	width: 100%;
+}
+
+    .input-control input:focus {
+    outline: 0;
+}
+
+    .input-control.success input {
+    border-color: #09c372;
+}
+
+    .input-control.error input {
+    border-color: #ff3860;
+}
+
+    .input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
     .login{
             font-family: "Roboto", sans-serif;
             font-size: 20px;
@@ -80,7 +138,7 @@
             padding: 10px;
             border: none;
             cursor: pointer;
-            }
+        }
 
     div{
         text-align: center;
@@ -199,30 +257,29 @@
         <h1>LOGIN</h1>
     </header>
     <main>
-        <h2>LogIn your account!</h2>
-    <div>
-        <p>Don't have an account?<a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\SignUp.html">Sign In</a></p>
-        <div class="input-control">
-            <label for="username">Username</label>
-            <input id="username" name="username" type="text">
-            <div class="error"></div>
+    <div class="container">
+    <form id="form" action="/">
+        <h2>LOGIN YOUR ACCOUNT!</h2>
+        <div>
+            <p class="already">Don't have an account?<a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\SignUp.html">Sign In</a></p>
+            <div class="input-control">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text">
+                <div class="error"></div>
+                </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input id="password"name="password" type="password">
+                <div class="error"></div>
+                </div>
+                <br>
+                <br>
+                    <a href=""><button class="login">LOG IN</button></a>
             </div>
-        <div class="input-control">
-            <label for="password">Password</label>
-            <input id="password"name="password" type="password">
-            <div class="error"></div>
-            </div>
-        <br><br>
-    </div>
-    <div class="signInContainer">
-        <a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\home.html"><button class="login">LOG IN</button></a>
-
+    </form>
     </div>
     </main>
-
-    <button class="go-back" onclick="window.history.back()">Go Back</button>
-
-    <div class="container"> 
+    <div class="back-container"> 
         <button class="go-back" onclick="windows.history.back()">Go Back</button>
     </div>
     <footer>
