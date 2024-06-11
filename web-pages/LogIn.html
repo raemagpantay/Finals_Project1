@@ -5,49 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finals_Project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>        
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-    }
-    header {
-        background-color: #333;
-        color: #fff;
-        padding: 20px 0;
-        text-align: center;
-    }
-    .go-back{
-        background-color: rgba(95, 92, 92, 0.356);
-        color: #fff;
-        position: absolute;
-        top: -410px;
-        right: 0;
-        margin: 10px;
-    }
-    nav {
-        background-color: #444;
-        text-align: center;
-        padding: 10px 0;
-    }
-    nav a {
-        color: #fff;
-        text-decoration: none;
-        padding: 10px 20px;
-    }
-    nav a:hover {
-        background-color: #555;
-    }
-    main {
-        padding: 0;
-        margin: 0 auto;
-        background-image: url('C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/images/Hexagon-dotted-connect-line-background-rotated.jpg');
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .go-back{
+            background-color: rgba(95, 92, 92, 0.356);
+            color: #fff;
+            position: absolute;
+            top: -410px;
+            right: 0;
+            margin: 10px;
+        }
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        main {
+            padding: 0;
+            margin: 0 auto;
+            background-image: url('C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/images/Hexagon-dotted-connect-line-background-rotated.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
         }
-        .container{
+        .container {
             padding: 35px;
             margin: 0;
             background-image: url('C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/images/halukay-logo.png');
@@ -66,50 +66,45 @@
             padding-top: 200px;
             margin-top: 0;
         }
-        #form h2{
-        color: #232323;
-        text-align: center;
-        font-size: italic;
+        #form h2 {
+            color: #232323;
+            text-align: center;
+            font-style: italic;
         }
         h2 {
             text-align: center;
-            font-size: italic;  
+            font-style: italic;  
         }
         .input-control {
-    display: flex;
-    flex-direction: column;
-    color: #232323;
-    font-size: 15px;
-    font-weight: 50px;
-}
-
-    .input-control input {
-    border: 2px solid #fbf8f3;
-	border-radius: 4px;
-	display: block;
-	font-size: 12px;
-	padding: 10px;
-	width: 100%;
-}
-
-    .input-control input:focus {
-    outline: 0;
-}
-
-    .input-control.success input {
-    border-color: #09c372;
-}
-
-    .input-control.error input {
-    border-color: #ff3860;
-}
-
-    .input-control .error {
-    color: #ff3860;
-    font-size: 9px;
-    height: 13px;
-}
-    .login{
+            display: flex;
+            flex-direction: column;
+            color: #232323;
+            font-size: 15px;
+            font-weight: 50px;
+        }
+        .input-control input {
+            border: 2px solid #fbf8f3;
+            border-radius: 4px;
+            display: block;
+            font-size: 12px;
+            padding: 10px;
+            width: 100%;
+        }
+        .input-control input:focus {
+            outline: 0;
+        }
+        .input-control.success input {
+            border-color: #09c372;
+        }
+        .input-control.error input {
+            border-color: #ff3860;
+        }
+        .input-control .error {
+            color: #ff3860;
+            font-size: 9px;
+            height: 13px;
+        }
+        .login {
             font-family: "Roboto", sans-serif;
             font-size: 20px;
             font-weight: bold;
@@ -126,9 +121,9 @@
             transition-duration: 0.3s;
             transition-property: box-shadow, transform;
             border: 0;
-    }
+        }
 
-    /* go-back button */
+        /* go-back button */
         .go-back {
             background-color: rgba(95, 92, 92, 0.356);
             color: #fbf8f3;
@@ -139,117 +134,116 @@
             border: none;
             cursor: pointer;
         }
-
-    div{
-        text-align: center;
-    }
-    footer{
-        background: #232323;
-        padding-top: 15px;
-    }
-    footer a{
-        color: #fbf8f3;
-    }
-    .footer-container{
-        width: 1140px;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-    }
-    .footer-content{
-        width: 33.3%;
-    }
-    h3{
-        font-size: 28px;
-        margin-bottom: 15px;
-        text-align: center;
-        color: #fbf8f3;
-    }
-    .magpantay{
-        font-size: 18px;
-        margin-bottom: 15px;
-        margin-top: 0;
-        text-align: center;
-        color: #fbf8f3;
-        padding-top: 12px;
-    }
-    .santiago{
-        font-size: 18px;
-        margin-bottom: 15px;
-        margin-top: 0;
-        text-align: center;
-        color: #fbf8f3;
-    }
-    .footer-content p{
-        width:190px;
-        margin: auto;
-        padding: 7px;
-    }
-    .footer-content ul{
-        text-align: center;
-    }
-    .contact{
-        color: #fbf8f3;
-    }
-    .list{
-        padding: 0;
-        font-family: Arial, sans-serif;
-    }
-    .list li{
-        width: auto;
-        text-align: center;
-        list-style-type:none;
-        padding: 7px;
-        position: relative;
-    }
-    .list li::before{
-        content: '';
-        position: absolute;
-        transform: translate(-50%,-50%);
-        left: 50%;
-        top: 100%;
-        width: 0;
-        height: 2px;
-        background: #f18930;
-        transition-duration: .5s;
-    }
-    .list li:hover::before{
-        width: 70px;
-    }
-    .social-icons{
-        text-align: center;
-        padding: 0;
-    }
-    .social-icons li{
-        display: inline-block;
-        text-align: center;
-        padding: 5px;
-    }
-    .social-icons i{
-        color: #fbf8f3;
-        font-size: 25px;
-    }
-    a{
-        text-decoration: none;
-    }
-    a:hover{
-        color: #f18930;
-    }
-    .social-icons i:hover{
-        color: #f18930;
-    }
-    .bottom-bar{
-        background: #f18930;
-        text-align: center;
-        padding: 10px 0;
-        margin-top: 50px;
-    }
-    .bottom-bar p{
-        color: #343434;
-        margin: 0;
-        font-size: 16px;
-        padding: 7px;
-    }
+        div {
+            text-align: center;
+        }
+        footer {
+            background: #232323;
+            padding-top: 15px;
+        }
+        footer a {
+            color: #fbf8f3;
+        }
+        .footer-container {
+            width: 1140px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+        .footer-content {
+            width: 33.3%;
+        }
+        h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #fbf8f3;
+        }
+        .magpantay {
+            font-size: 18px;
+            margin-bottom: 15px;
+            margin-top: 0;
+            text-align: center;
+            color: #fbf8f3;
+            padding-top: 12px;
+        }
+        .santiago {
+            font-size: 18px;
+            margin-bottom: 15px;
+            margin-top: 0;
+            text-align: center;
+            color: #fbf8f3;
+        }
+        .footer-content p {
+            width: 190px;
+            margin: auto;
+            padding: 7px;
+        }
+        .footer-content ul {
+            text-align: center;
+        }
+        .contact {
+            color: #fbf8f3;
+        }
+        .list {
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .list li {
+            width: auto;
+            text-align: center;
+            list-style-type: none;
+            padding: 7px;
+            position: relative;
+        }
+        .list li::before {
+            content: '';
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 100%;
+            width: 0;
+            height: 2px;
+            background: #f18930;
+            transition-duration: .5s;
+        }
+        .list li:hover::before {
+            width: 70px;
+        }
+        .social-icons {
+            text-align: center;
+            padding: 0;
+        }
+        .social-icons li {
+            display: inline-block;
+            text-align: center;
+            padding: 5px;
+        }
+        .social-icons i {
+            color: #fbf8f3;
+            font-size: 25px;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            color: #f18930;
+        }
+        .social-icons i:hover {
+            color: #f18930;
+        }
+        .bottom-bar {
+            background: #f18930;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 50px;
+        }
+        .bottom-bar p {
+            color: #343434;
+            margin: 0;
+            font-size: 16px;
+            padding: 7px;
+        }
     </style>
 </head>
 <body>
@@ -257,30 +251,30 @@
         <h1>LOGIN</h1>
     </header>
     <main>
-    <div class="container">
-    <form id="form" action="/">
-        <h2>LOGIN YOUR ACCOUNT!</h2>
-        <div>
-            <p class="already">Don't have an account?<a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\SignUp.html">Sign In</a></p>
-            <div class="input-control">
-                <label for="username">Username</label>
-                <input id="username" name="username" type="text">
-                <div class="error"></div>
+        <div class="container">
+            <form id="form" action="/">
+                <h2>LOGIN YOUR ACCOUNT!</h2>
+                <div>
+                    <p class="already">Don't have an account?<a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/SignUp.html">Sign In</a></p>
+                    <div class="input-control">
+                        <label for="username">Username</label>
+                        <input id="username" name="username" type="text">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="password">Password</label>
+                        <input id="password" name="password" type="password">
+                        <div class="error"></div>
+                    </div>
+                    <br>
+                    <br>
+                    <button type="button" class="login" onclick="redirectToHome()">LOG IN</button>
                 </div>
-            <div class="input-control">
-                <label for="password">Password</label>
-                <input id="password"name="password" type="password">
-                <div class="error"></div>
-                </div>
-                <br>
-                <br>
-                    <a href=""><button class="login">LOG IN</button></a>
-            </div>
-    </form>
-    </div>
+            </form>
+        </div>
     </main>
     <div class="back-container"> 
-        <button class="go-back" onclick="windows.history.back()">Go Back</button>
+        <button class="go-back" onclick="window.history.back()">Go Back</button>
     </div>
     <footer>
         <div class="footer-container">
@@ -292,35 +286,41 @@
             </div>
             <div class="footer-content">
                 <h3>Quick Links</h3>
-                 <ul class="list">
-                    <li><a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\home.html">Home</a></li>
-                    <li><a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\about.html">About</a></li>
-                    <li><a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\SignUp.html">SignUp</a></li>
-                    <li><a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\Shop.html">Products</a></li>
-                    <li><a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\contact.html">Contact</a></li>
-                 </ul>
+                <ul class="list">
+                    <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/home.html">Home</a></li>
+                    <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/about.html">About</a></li>
+                    <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/SignUp.html">SignUp</a></li>
+                    <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/Shop.html">Products</a></li>
+                    <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/contact.html">Contact</a></li>
+                </ul>
             </div>
             <div class="footer-content">
                 <h3>Follow Us</h3>
                 <h4 class="magpantay">Magpantay, Rae Aljon</h4>
                 <ul class="social-icons">
-                 <li><a href="https://www.facebook.com/arashiii2003/"><i class="fab fa-facebook"></i></a></li>
-                 <li><a href="https://x.com/rae_aljon"><i class="fab fa-twitter"></i></a></li>
-                 <li><a href="https://www.instagram.com/raeee_arashi/"><i class="fab fa-instagram"></i></a></li>
-                 <li><a href="https://www.linkedin.com/in/rae-aljon-magpantay/"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.facebook.com/arashiii2003/"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://x.com/rae_aljon"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/raeee_arashi/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/rae-aljon-magpantay/"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
                 <h4 class="santiago">Santiago, Karl</h4>
                 <ul class="social-icons">
-                 <li><a href="https://www.facebook.com/KarlSantiagoo"><i class="fab fa-facebook"></i></a></li>
-                 <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                 <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                 <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.facebook.com/KarlSantiagoo"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
                 </ul>
-                </div>
+            </div>
         </div>
         <div class="bottom-bar">
             <p>&copy; 2023 designed by Magpantay Rae Aljon & Santiago, Karl. All rights reserved</p>
         </div>
     </footer>
+
+    <script>
+        function redirectToHome() {
+            window.location.href = "file:///C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/home.html";
+        }
+    </script>
 </body>
 </html>
