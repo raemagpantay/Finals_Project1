@@ -1,159 +1,370 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Simple Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
             padding: 0;
-            background-color: #f4f4f4;
+            margin: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
         header {
             background-color: #333;
             color: #fff;
             padding: 20px 0;
             text-align: center;
+            width: 100%;
         }
-        .container {
-        position: relative;
-        height: 100vh; 
-        width: 100%; 
-        }
-        .go-back{
-            background-color: rgba(95, 92, 92, 0.356);
-            color: #fff;
-            position: absolute;
-            top: -300px;
-            right: 0;
-            margin: 10px;
-        }
+
         nav {
             background-color: #444;
             text-align: center;
             padding: 10px 0;
+            width: 100%;
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
             padding: 10px 20px;
         }
+
         nav a:hover {
             background-color: #555;
         }
+
         main {
+            flex-grow: 1;
             padding: 20px;
-            width: 80%;
-            margin: 0 auto;
+            width: 100%;
         }
-        footer{
-        background: #232323;
-        padding-top: 15px;
-    }
-    footer a{
-        color: #fbf8f3;
-    }
-    .footer-container{
-        width: 1140px;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-    }
-    .footer-content{
-        width: 33.3%;
-    }
-    h3{
-        font-size: 28px;
-        margin-bottom: 15px;
-        text-align: center;
-        color: #fbf8f3;
-    }
-    .magpantay{
-        font-size: 18px;
-        margin-bottom: 15px;
-        margin-top: 0;
-        text-align: center;
-        color: #fbf8f3;
-        padding-top: 12px;
-    }
-    .santiago{
-        font-size: 18px;
-        margin-bottom: 15px;
-        margin-top: 0;
-        text-align: center;
-        color: #fbf8f3;
-    }
-    .footer-content p{
-        width:190px;
-        margin: auto;
-        padding: 7px;
-    }
-    .footer-content ul{
-        text-align: center;
-    }
-    .contact{
-        color: #fbf8f3;
-    }
-    .list{
-        padding: 0;
-        font-family: Arial, sans-serif;
-    }
-    .list li{
-        width: auto;
-        text-align: center;
-        list-style-type:none;
-        padding: 7px;
-        position: relative;
-    }
-    .list li::before{
-        content: '';
-        position: absolute;
-        transform: translate(-50%,-50%);
-        left: 50%;
-        top: 100%;
-        width: 0;
-        height: 2px;
-        background: #f18930;
-        transition-duration: .5s;
-    }
-    .list li:hover::before{
-        width: 70px;
-    }
-    .social-icons{
-        text-align: center;
-        padding: 0;
-    }
-    .social-icons li{
-        display: inline-block;
-        text-align: center;
-        padding: 5px;
-    }
-    .social-icons i{
-        color: #fbf8f3;
-        font-size: 25px;
-    }
-    a{
-        text-decoration: none;
-    }
-    a:hover{
-        color: #f18930;
-    }
-    .social-icons i:hover{
-        color: #f18930;
-    }
-    .bottom-bar{
-        background: #f18930;
-        text-align: center;
-        padding: 10px 0;
-        margin-top: 50px;
-    }
-    .bottom-bar p{
-        color: #343434;
-        margin: 0;
-        font-size: 16px;
-        padding: 7px;
-    }
+
+        .contact-wrap {
+            width: 100%;
+            height: auto;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .contact-in {
+            padding: 40px 30px;
+        }
+
+        .contact-in:nth-child(1) {
+            flex: 20%;
+            color: #232323;
+        }
+
+        .contact-in:nth-child(2) {
+            flex: 25%;
+            background: #232323;
+        }
+
+        .contact-in:nth-child(3) {
+            flex: 25%;
+            padding: 0;
+        }
+
+        .contact-in h1 {
+            font-size: 24px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .contact-in h2 {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .contact-in h2 i {
+            font-size: 16px;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            background: #f5f5f5;
+            color: #000;
+            border-radius: 50px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .contact-in p {
+            font-size: 14px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .contact-in ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-in ul li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+
+        .contact-in ul li a {
+            display: block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            background: #fff;
+            border-radius: 50px;
+        }
+
+        .contact-in ul li a i {
+            font-size: 14px;
+            line-height: 30px;
+            color: #000;
+        }
+
+        .contact-in form {
+            width: 100%;
+            height: auto;
+        }
+
+        .contact-in-input {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            border: 1px solid #fff;
+            outline: none;
+            padding-left: 5px;
+            background: transparent;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 300;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-in-input::placeholder {
+            color: #fff;
+        }
+
+        .contact-in-textarea {
+            width: 100%;
+            height: 140px;
+            margin-bottom: 20px;
+            border: 1px solid #fff;
+            outline: none;
+            padding-top: 5px;
+            padding-left: 5px;
+            background: transparent;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 300;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-in-textarea::placeholder {
+            color: #fff;
+        }
+
+        .contact-in-btn {
+            width: 100%;
+            height: 40px;
+            border: 1px solid #fff;
+            outline: none;
+            background: transparent;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 300;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+        }
+
+        .contact-in iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .go-back {
+            background-color: rgba(95, 92, 92, 0.356);
+            color: #fff;
+            position: absolute;
+            top: 10px;
+            right: 0;
+            margin: 10px;
+        }
+
+        footer {
+            background: #232323;
+            padding-top: 15px;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fbf8f3;
+        }
+
+        .footer-container {
+            max-width: 1140px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-content {
+            width: 33.3%;
+        }
+
+        h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #fbf8f3;
+        }
+
+        .magpantay {
+            font-size: 18px;
+            margin-bottom: 15px;
+            margin-top: 0;
+            text-align: center;
+            color: #fbf8f3;
+            padding-top: 12px;
+        }
+
+        .santiago {
+            font-size: 18px;
+            margin-bottom: 15px;
+            margin-top: 0;
+            text-align: center;
+            color: #fbf8f3;
+        }
+
+        .footer-content p {
+            width: 190px;
+            margin: auto;
+            padding: 7px;
+        }
+
+        .footer-content ul {
+            text-align: center;
+        }
+
+        .contact {
+            color: #fbf8f3;
+        }
+
+        .list {
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .list li {
+            width: auto;
+            text-align: center;
+            list-style-type: none;
+            padding: 7px;
+            position: relative;
+        }
+
+        .list li::before {
+            content: '';
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 100%;
+            width: 0;
+            height: 2px;
+            background: #f18930;
+            transition-duration: .5s;
+        }
+
+        .list li:hover::before {
+            width: 70px;
+        }
+
+        .social-icons {
+            text-align: center;
+            padding: 0;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .social-icons i {
+            color: #fbf8f3;
+            font-size: 25px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #f18930;
+        }
+
+        .social-icons i:hover {
+            color: #f18930;
+        }
+
+        .bottom-bar {
+            background: #f18930;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 50px;
+        }
+
+        .bottom-bar p {
+            color: #343434;
+            margin: 0;
+            font-size: 16px;
+            padding: 7px;
+        }
+
+        @media only screen and (max-width: 480px) {
+            .contact-in:nth-child(1) {
+                flex: 50%;
+            }
+
+            .contact-in:nth-child(2) {
+                flex: 50%;
+            }
+
+            .contact-in:nth-child(3) {
+                flex: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 360px) {
+            .contact-in:nth-child(1) {
+                flex: 50%;
+            }
+
+            .contact-in:nth-child(2) {
+                flex: 50%;
+            }
+
+            .contact-in:nth-child(3) {
+                flex: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -166,37 +377,63 @@
         <a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\about.html">About</a>
     </nav>
     <main>
-        <h2>Main Content</h2>
-        <p>This is the main content of the website. You can add more content here.</p>
+        <div class="contact-wrap">
+            <div class="contact-in">
+                <h1>Contact Info</h1>
+                <h2><i class="fa fa-phone" aria-hidden="true"></i> Phone</h2>
+                <p>+63 932-204-7101</p>
+                <h2><i class="fa fa-envelope" aria-hidden="true"></i> Email</h2>
+                <p>magpantay.raealjon@ncst.edu.ph</p>
+                <h2><i class="fa fa-map-marker" aria-hidden="true"></i> Address</h2>
+                <p>Emilio Aguinaldo Hwy, Dasmariñas, Cavite</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/arashiii2003/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://x.com/rae_aljon"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="mailto:magpantay.raealjon@ncst.edu.ph"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/raeee_arashi/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="contact-in">
+                <h1>Send a Message</h1>
+                <form>
+                    <input type="text" placeholder="Full Name" class="contact-in-input">
+                    <input type="text" placeholder="Email" class="contact-in-input">
+                    <input type="text" placeholder="Subject" class="contact-in-input">
+                    <textarea placeholder="Message" class="contact-in-textarea"></textarea>
+                    <input type="submit" value="SUBMIT" class="contact-in-btn">
+                </form>
+            </div>
+            <div class="contact-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d685.0873860307007!2d120.93992304308297!3d14.327069247777589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d4ffe74111f3%3A0xa490021f1444213f!2sNCST%20Building1%2C%20Emilio%20Aguinaldo%20Hwy%2C%20Dasmari%C3%B1as%2C%20Cavite!5e1!3m2!1sen!2sph!4v1718177426692!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
     </main>
-    
-        <button class="go-back" onclick="windows.history.back()">Go Back</button>
     <footer>
         <div class="footer-container">
             <div class="footer-content">
                 <h3>Contact Us</h3>
-                <p class="contact">Email:Info@example.com</p>
-                <p class="contact">Phone:+63 9322 047101</p>
-                <p class="contact">Address:Dasmriñas, Cavite, Philippines</p>
+                <p class="contact">Email: Info@example.com</p>
+                <p class="contact">Phone: +63 9322 047101</p>
+                <p class="contact">Address: Dasmariñas, Cavite, Philippines</p>
             </div>
             <div class="footer-content">
                 <h3>Quick Links</h3>
-                 <ul class="list">
+                <ul class="list">
                     <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/home.html">Home</a></li>
                     <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/about.html">About</a></li>
                     <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/SignUp.html">SignUp</a></li>
                     <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/Shop.html">Products</a></li>
                     <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/contact.html">Contact</a></li>
-                 </ul>
+                </ul>
             </div>
             <div class="footer-content">
                 <h3>Follow Us</h3>
                 <h4 class="magpantay">Magpantay, Rae Aljon</h4>
                 <ul class="social-icons">
-                 <li><a href="https://www.facebook.com/arashiii2003/"><i class="fab fa-facebook"></i></a></li>
-                 <li><a href="https://x.com/rae_aljon"><i class="fab fa-twitter"></i></a></li>
-                 <li><a href="https://www.instagram.com/raeee_arashi/"><i class="fab fa-instagram"></i></a></li>
-                 <li><a href="https://www.linkedin.com/in/rae-aljon-magpantay/"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.facebook.com/arashiii2003/"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://x.com/rae_aljon"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/raeee_arashi/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/rae-aljon-magpantay/"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
                 <h4 class="santiago">Santiago, Karl</h4>
                 <ul class="social-icons">
@@ -205,11 +442,17 @@
                     <li><a href="https://www.instagram.com/_krlsntigo.notfound"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/karl-clarence-santiago-94372a308/"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
-                </div>
+            </div>
         </div>
         <div class="bottom-bar">
             <p>&copy; 2023 designed by Magpantay Rae Aljon & Santiago, Karl. All rights reserved</p>
         </div>
     </footer>
+
+    <!-- JavaScript section -->
+
+    <script>
+
+     </script>
 </body>
 </html>
