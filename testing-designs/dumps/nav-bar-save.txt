@@ -1,0 +1,6 @@
+nav = nav-bar		
+div = footer-container		= header-container
+div = footer-content		= header-content
+ul = list
+li
+a

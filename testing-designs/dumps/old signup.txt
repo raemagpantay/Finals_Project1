@@ -1,0 +1,24 @@
+Signup main section 
+
+        <h2>Create a new account!</h2>
+    <div>
+        <p>Already Registered? <a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\LogIn.html">LogIn</a></p>
+        <p>NAME</p>
+        <input type="text"/>
+        <p>EMAIL</p>
+        <input type="email" name="" id="">
+        <p>PASSWORD</p>
+        <input type="password"/>
+        <p>DATE OF BIRTH</p>
+        <input type="date"/>
+        <br><br>
+        <div class="gender">
+            Gender:
+            Male: <input type="radio" name="gender">
+            Female: <input type="radio" name="gender">
+        </div>
+        <br><br>
+    </div>
+    <div class="signInContainer">
+        <a href="C:\Users\StrwbryBagel\Desktop\Finals_Project\Finals_Project\web-pages\home.html"><button class="SignIn">SIGN UP</button></a>
+    </div>
