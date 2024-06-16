@@ -447,6 +447,11 @@
         function redirectToHome() {
             window.location.href = "file:///C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/home.html";
         }
+        // hamburger menu
+        document.querySelector(".hamburger").onclick = function() {
+            var navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
     </script>
 </body>
 </html>

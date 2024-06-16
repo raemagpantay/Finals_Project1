@@ -448,6 +448,7 @@
     </footer>
 
     <script>
+        // signup script
         const form = document.getElementById('form');
         const username = document.getElementById('username');
         const email = document.getElementById('email');
@@ -529,6 +530,12 @@
 
             return isValid;
         };
+
+        // hamburger menu
+        document.querySelector(".hamburger").onclick = function() {
+            var navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
     </script>
 </body>
 </html>

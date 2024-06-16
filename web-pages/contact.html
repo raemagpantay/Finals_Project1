@@ -408,7 +408,7 @@
             font-size: 16px;
             padding: 7px;
         }
-        
+
         @media only screen and (max-width: 480px) {
             .contact-in:nth-child(1) {
                 flex: 50%;
@@ -539,7 +539,10 @@
     <!-- JavaScript section -->
 
     <script>
-
-     </script>
+        document.querySelector(".hamburger").onclick = function() {
+            var navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
