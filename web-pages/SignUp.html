@@ -444,24 +444,20 @@
 </head>
 <body>
     <header>
-        <div class="logo"><a class="halukay" href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/home.html">HALUKAY</a></div>
+        <div class="logo"><a class="halukay" href="home.html">HALUKAY</a></div>
         <div class="hamburger">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
         </div>
         <nav class="nav-bar">
-            <div class="header-container">
-                <div class="header-content">
-                    <ul class="list">
-                        <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/home.html">Home</a></li>
-                        <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/about.html">About</a></li>
-                        <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/SignUp.html">SignUp</a></li>
-                        <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/Shop.html">Products</a></li>
-                        <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+            <ul class="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sign-up.html">Sign Up</a></li>
+                <li><a href="shop.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
     <div class="notifications"></div>
@@ -504,18 +500,18 @@
         <div class="footer-container">
             <div class="footer-content">
                 <h3>Contact Us</h3>
-                <p class="contact">Email: Info@example.com</p>
-                <p class="contact">Phone: +63 9322 047101</p>
+                <p class="contact">Email: <a href="mailto:info@example.com">info@example.com</a></p>
+                <p class="contact">Phone: <a href="tel:+639322047101">+63 9322 047101</a></p>
                 <p class="contact">Address: Dasmariñas, Cavite, Philippines</p>
             </div>
             <div class="footer-content">
                 <h3>Quick Links</h3>
                 <ul class="list">
-                    <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/home.html">Home</a></li>
-                    <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/about.html">About</a></li>
-                    <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/SignUp.html">SignUp</a></li>
-                    <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/Shop.html">Products</a></li>
-                    <li><a href="C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/contact.html">Contact</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="sign-up.html">Sign Up</a></li>
+                    <li><a href="shop.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-content">
@@ -530,9 +526,9 @@
                 <h4 class="santiago">Santiago, Karl</h4>
                 <ul class="social-icons">
                     <li><a href="https://www.facebook.com/KarlSantiagoo"><i class="fab fa-facebook"></i></a></li>
-                 <li><a href="https://x.com/Karuu_notfound"><i class="fab fa-twitter"></i></a></li>
-                 <li><a href="https://www.instagram.com/_krlsntigo.notfound"><i class="fab fa-instagram"></i></a></li>
-                 <li><a href="https://www.linkedin.com/in/karl-clarence-santiago-94372a308/"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://x.com/Karuu_notfound"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/_krlsntigo.notfound"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/karl-clarence-santiago-94372a308/"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -544,88 +540,90 @@
 
     <script>
         // signup script
-        const form = document.getElementById('form');
-        const username = document.getElementById('username');
-        const email = document.getElementById('email');
-        const password = document.getElementById('password');
-        const password2 = document.getElementById('password2');
+const form = document.getElementById('form');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const password2 = document.getElementById('password2');
 
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            if (validateInputs()) {
-                window.location.href = 'C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/web-pages/home.html';
-            }
-        });
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (validateInputs()) {
+        alert("Sign up successful!");
+        window.location.href = 'index.html';
+    } else {
+        alert("Sign up failed. Please try again.");
+    }
+});
 
-        const setError = (element, message) => {
-            const inputControl = element.parentElement;
-            const errorDisplay = inputControl.querySelector('.error');
-            errorDisplay.innerText = message;
-            inputControl.classList.add('error');
-            inputControl.classList.remove('success');
-        };
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success');
+};
 
-        const setSuccess = element => {
-            const inputControl = element.parentElement;
-            const errorDisplay = inputControl.querySelector('.error');
-            errorDisplay.innerText = '';
-            inputControl.classList.add('success');
-            inputControl.classList.remove('error');
-        };
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
 
-        const isValidEmail = email => {
-            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return re.test(String(email).toLowerCase());
-        };
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+};
 
-        const validateInputs = () => {
-            const usernameValue = username.value.trim();
-            const emailValue = email.value.trim();
-            const passwordValue = password.value.trim();
-            const password2Value = password2.value.trim();
+const validateInputs = () => {
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim();
+    const password2Value = password2.value.trim();
 
-            let isValid = true;
+    let isValid = true;
 
-            if (usernameValue === '') {
-                setError(username, 'Username is required');
-                isValid = false;
-            } else {
-                setSuccess(username);
-            }
+    if (usernameValue === '') {
+        setError(username, 'Username is required');
+        isValid = false;
+    } else {
+        setSuccess(username);
+    }
 
-            if (emailValue === '') {
-                setError(email, 'Email is required');
-                isValid = false;
-            } else if (!isValidEmail(emailValue)) {
-                setError(email, 'Provide a valid email address');
-                isValid = false;
-            } else {
-                setSuccess(email);
-            }
+    if (emailValue === '') {
+        setError(email, 'Email is required');
+        isValid = false;
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Provide a valid email address');
+        isValid = false;
+    } else {
+        setSuccess(email);
+    }
 
-            if (passwordValue === '') {
-                setError(password, 'Password is required');
-                isValid = false;
-            } else if (passwordValue.length < 8) {
-                setError(password, 'Password must be at least 8 characters.');
-                isValid = false;
-            } else {
-                setSuccess(password);
-            }
+    if (passwordValue === '') {
+        setError(password, 'Password is required');
+        isValid = false;
+    } else if (passwordValue.length < 8) {
+        setError(password, 'Password must be at least 8 characters.');
+        isValid = false;
+    } else {
+        setSuccess(password);
+    }
 
-            if (password2Value === '') {
-                setError(password2, 'Please confirm your password');
-                isValid = false;
-            } else if (password2Value !== passwordValue) {
-                setError(password2, "Passwords don't match");
-                isValid = false;
-            } else {
-                setSuccess(password2);
-            }
+    if (password2Value === '') {
+        setError(password2, 'Please confirm your password');
+        isValid = false;
+    } else if (password2Value !== passwordValue) {
+        setError(password2, "Passwords don't match");
+        isValid = false;
+    } else {
+        setSuccess(password2);
+    }
 
-            return isValid;
-        };
-
+    return isValid;
+};
         // hamburger menu
         document.querySelector(".hamburger").onclick = function() {
             var navBar = document.querySelector(".nav-bar");
@@ -700,6 +698,8 @@ signUpButton.addEventListener('click', () => {
     // Simulate a failed sign-up attempt
     showToast('Sign-up failed. Please try again.');
 });
+
+
     </script>
 </body>
 </html>
