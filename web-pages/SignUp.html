@@ -3,6 +3,9 @@
 <head>
     <title>Finals_Project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -167,7 +170,6 @@
             border-radius: 4px;
         }
         .SignIn{
-            margin-left: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .input-control {
@@ -345,6 +347,99 @@
             font-size: 16px;
             padding: 7px;
         }
+
+
+
+        /* notifications */
+        .notifications{
+    position: fixed;
+    top: 30px;
+    right: 20px;
+}
+.toast{
+    position: relative;
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+    width: 400px;
+    display: grid;
+    grid-template-columns: 70px 1fr 70px;
+    border-radius: 5px;
+    --color: #0abf30;
+    background-image: 
+        linear-gradient (
+            to right, #0abf3055, #22242f 30%
+        ); 
+    animation: show 0.3s ease 1 forwards
+}
+.toast i{
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+}
+.toast .title{
+    font-size: x-large;
+    font-weight: bold;
+}
+.toast span, .toast i:nth-child(3){
+    color: #fff;
+    opacity: 0.6;
+}
+@keyframes show{
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-5%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-10%);
+    }
+}
+.toast::before{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color);
+    width: 100%;
+    height: 3px;
+    content: '';
+    box-shadow: 0 0 10px var(--color);
+    animation: timeOut 5s linear 1 forwards;
+}
+@keyframes timeOut{
+    to{
+        width: 0;
+    }
+}
+    .toast.error{
+        --color: #f24d4c;
+        background-image: 
+            linear-gradient (
+                to right, #f24d4c55, #22242F 30%
+            );
+    }
+    .toast.warning{
+        --color: #e9bd0c;
+        background-image: 
+            linear-gradient (
+                to right, #e9bd0c55, #22242F 30%
+            );
+    }
+    .toast.info{
+        --color: #3498db;
+        background-image: 
+            linear-gradient (
+                to right, #3498db55, #22242F 30%
+            );
+    }
+
+    
     </style>
 </head>
 <body>
@@ -369,7 +464,7 @@
             </div>
         </nav>
     </header>
-
+    <div class="notifications"></div>
     <main>
         <div class="logo"></div>
         <div class="container">
@@ -536,6 +631,75 @@
             var navBar = document.querySelector(".nav-bar");
             navBar.classList.toggle("active");
         }
+
+        // notification
+        let notifications = document.querySelector('.notifications');
+
+    function createToast(type, icon, title, text){
+        let newToast = document.createElement('div');
+        newToast.innerHTML = `
+            <div class="toast ${type}">
+                <i class="${icon}"></i>
+                <div class="content">
+                    <div class="title" >${title}</div>
+                    <span>${text}</span>
+                </div>
+                <i class="fa-solid fa-xmark" onclick="(this.parentElement).remove()"></i>
+            </div>`;
+        notifications.appendChild(newToast);
+        setTimeout(()=>newToast.remove(), 5000)
+    }
+    success.onclick = function(){
+        let type = 'success';
+        let icon = 'fa-solid fa-circle-check';
+        let title = 'Success';
+        let text = 'This is a success toast.';
+        createToast(type, icon, title, text);
+    }
+    error.onclick = function(){
+        let type = 'error';
+        let icon = 'fa-solid fa-circle-exclamation';
+        let title = 'Error';
+        let text = 'This is an error toast.';
+        createToast(type, icon, title, text);
+    }
+    warning.onclick = function(){
+        let type = 'warning';
+        let icon = 'fa-solid fa-triangle-exclamation';
+        let title = 'Warning';
+        let text = 'This is a warning toast.';
+        createToast(type, icon, title, text);
+    }
+    info.onclick = function(){
+        let type = 'info';
+        let icon = 'fa-solid fa-circle-info';
+        let title = 'Info';
+        let text = 'This is an info toast.';
+        createToast(type, icon, title, text);
+    }
+
+    // sign up notifications
+    // Function to create and display a toast notification
+function showToast(message, duration = 3000) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        toast.classList.add('fade');
+        setTimeout(() => {
+            document.body.removeChild(toast);
+        }, 500);
+    }, duration);
+}
+
+// Example usage: Show a toast notification when sign-up fails
+const signUpButton = document.querySelector('.sign-up-button');
+signUpButton.addEventListener('click', () => {
+    // Simulate a failed sign-up attempt
+    showToast('Sign-up failed. Please try again.');
+});
     </script>
 </body>
 </html>
