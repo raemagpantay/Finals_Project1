@@ -127,6 +127,7 @@
 
         /* go-back button */
         .go-back {
+            display: block;
             background-color: rgba(26, 25, 25, 0.705);
             color: #fbf8f3;
             position: absolute;
@@ -398,6 +399,7 @@
             </form>
         </div>
     </main>
+    <button class="go-back" onclick="window.history.back()">Go Back</button>
     <footer>
         <div class="footer-container">
             <div class="footer-content">
@@ -448,6 +450,13 @@
     // Redirect to the home page
     window.location.href = "../index.html";
 }
+
+const hamburger = document.querySelector('.hamburger');
+const navBar = document.querySelector('.nav-bar');
+
+hamburger.addEventListener('click', () => {
+    navBar.classList.toggle('active');
+});
     </script>
 </body>
 </html>
