@@ -128,8 +128,8 @@
             font-family: "Roboto Flex", sans-serif;
             font-weight: 300;
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             background-image: url('C:/Users/StrwbryBagel/Desktop/Finals_Project/Finals_Project/images/Hexagon-dotted-connect-line-background-rotated.jpg');
             background-size: cover;
             background-repeat: no-repeat;
@@ -139,11 +139,10 @@
 
         .grid-container{
             display: grid;
-            flex-wrap: wrap;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             max-width: 1280px;
-            margin: 0 auto;
+            width: 100%;
         }
 
         .inside-container {
@@ -158,9 +157,9 @@
         .h3-title {
             text-align: center;
             color: #333;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            
+            font-size: 5em;
+            margin-bottom: 20px;
+            width: 100%;
         }
 
         .classes {
@@ -200,6 +199,19 @@
             object-fit: cover;
             margin-bottom: 5px;
         }
+            
+            @media screen and (max-width: 1024px) {
+                .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                .grid-container {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                }
+            }
 
         .go-back {
             background-color: rgba(26, 25, 25, 0.705);
