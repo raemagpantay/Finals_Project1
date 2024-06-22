@@ -120,7 +120,6 @@
                 background: #fefefe;
             }
         }
-        /* end of nav */
 
         main{
             padding: 20px;
@@ -138,86 +137,69 @@
             flex-grow: 1;
         }
 
-        /* grid css */
-        .grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1280px;
-  margin: 0 auto;
-}
+        .grid-container{
+            display: grid;
+            flex-wrap: wrap;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
 
-.inside-container {
-  margin-bottom: 20px;
-  padding: 20px;
-  box-sizing: border-box;
-}
+        .inside-container {
+            margin-bottom: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .date {
+            margin-bottom: 30px;
+        }
 
-.calendar-container {
-  max-width: 800px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-}
+        .h3-title {
+            text-align: center;
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
 
-.date {
-  margin-bottom: 30px;
-}
+        .classes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-.h3-title {
-  text-align: center;
-  color: #333;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
+        .clothing-category {
+            flex: 1 1 calc(33.333% - 20px);
+            min-width: 250px;
+        }
 
-.days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
-}
+        .clothing-class {
+            text-align: center;
+            background-color: #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
 
-.day {
-  text-align: center;
-  background-color: #ddd;
-  padding: 10px;
-  border-radius: 5px;
-}
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 10px;
+        }
 
-.number-pre,
-.number {
-  text-align: center;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 5px;
-  font-size: 1em;
-}
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.number {
-  background-color: #3498db;
-  color: #fff;
-}
+        .image-container img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
 
-.active {
-  background-color: #232323;
-}
-
-@media screen and (max-width: 1024px) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-/* end of grid */
-
-/* go-back button */
         .go-back {
             background-color: rgba(26, 25, 25, 0.705);
             color: #fbf8f3;
@@ -231,16 +213,6 @@
             border-radius: 5px;
         }
 
-        .shoplist{
-            padding: 150px;
-            margin: 0;
-            background-image: url('../images/halukay-logo.png');
-            background-size: 700px;
-            background-repeat: no-repeat;
-            background-position-x: 100px;
-            background-position-y: 100px;
-            flex: 1;
-        }
         footer {
             background: #232323;
             padding-top: 15px;
@@ -269,21 +241,16 @@
             color: #fbf8f3;
         }
 
-        .magpantay {
+        .magpantay, .santiago {
             font-size: 18px;
             margin-bottom: 15px;
             margin-top: 0;
             text-align: center;
             color: #fbf8f3;
-            padding-top: 12px;
         }
 
-        .santiago {
-            font-size: 18px;
-            margin-bottom: 15px;
-            margin-top: 0;
-            text-align: center;
-            color: #fbf8f3;
+        .magpantay {
+            padding-top: 12px;
         }
 
         .footer-content p {
@@ -395,50 +362,80 @@
             <div class="inside-container">
                 <div class="date">
                     <h3 class="h3-title">SALE 2024</h3>
-                    <div class="days">
-                        <div class="day">Mens</div>
-                        <div class="day">Womens</div>
-                        <div class="day">Hoodies</div>
-                        <div class="day">hats</div>
-                        <div class="day">Shoes</div>
-                        <div class="day">Shirts</div>
-                        <div class="day">Pants</div>
+                    <div class="classes">
+                        <div class="clothing-category">
+                            <div class="clothing-class">Mens</div>
+                            <div class="image-grid">
+                                <div class="image-container">
+                                    <img src="../images/shopping-list/-black-and-yellow-jersey-shirt.png" alt="Item 1">
+                                </div>
+                                <div class="image-container">
+                                    <img src="../images/shopping-list/black-front-sport-jacket.png" alt="Item 6"> 
+                                </div>
+                                <!-- Add more men's items here -->
+                            </div>
+                        </div>
+                        <div class="clothing-category">
+                            <div class="clothing-class">Womens</div>
+                            <div class="image-grid">
+                                <div class="image-container">
+                                    <img src="../images/shopping-list/black-and-white-hoodie-dress.png" alt="Item 3">
+                                </div>
+                                <!-- Add more women's items here -->
+                            </div>
+                        </div>
+                        <div class="clothing-category">
+                            <div class="clothing-class">Hoodies</div>
+                            <div class="image-grid">
+                                <div class="image-container">
+                                    <img src="../images/shopping-list/black-and-orange-cotton-hoodie-shirt.png" alt="Item 2">
+                                </div>
+                                <div class="image-container">
+                                    <img src="../images/shopping-list/black-blank-hoodie-mockup.png" alt="Item 4">
+                                </div>
+                                <!-- Add more hoodie items here -->
+                            </div>
+                        </div>
+                        <div class="clothing-category">
+                            <div class="clothing-class">Hats</div>
+                            <div class="image-grid">
+                                <div class="image-container">
+                                    <img src="../images/shopping-list/black-cap.png" alt="Item 5">
+                                </div>
+                                <!-- Add more hat items here -->
+                            </div>
+                        </div>
+                        <div class="clothing-category">
+                            <div class="clothing-class">Shoes</div>
+                            <div class="image-grid">
+                                <!-- Add shoe items here -->
+                            </div>
+                        </div>
+                        <div class="clothing-category">
+                            <div class="clothing-class">Shirts</div>
+                            <div class="image-grid">
+                                <div class="image-container">
+                                    <img src="../images/shopping-list/black-front-sweater.png" alt="Item 8">
+                                </div>
+                                <div class="image-container">
+                                    <img src="../images/shopping-list/blank-green-sweatshirt.png" alt="Item 10">
+                                </div>
+                                <!-- Add more shirt items here -->
+                            </div>
+                        </div>
+                        <div class="clothing-category">
+                            <div class="clothing-class">Pants</div>
+                            <div class="image-grid">
+                                <div class="image-container">
+                                    <img src="../images/shopping-list/black-front-sports-shorts.png" alt="Item 7">
+                                </div>
+                                <div class="image-container">
+                                    <img src="../images/shopping-list/black-long-track-pants-and-shoes.png" alt="Item 9">
+                                </div>
+                                <!-- Add more pants items here -->
+                            </div>
+                        </div>
                     </div>
-                        <div class="image-grid">
-                            <img src="../images/shopping-list/-black-and-yellow-jersey-shirt.png" alt="Item 1">
-                            <img src="../images/shopping-list/black-and-orange-cotton-hoodie-shirt.png" alt="Item 2">
-                            <img src="../images/shopping-list/black-and-white-hoodie-dress.png" alt="Item 3">
-                            <img src="../images/shopping-list/black-blank-hoodie-mockup.png" alt="Item 4">
-                            <img src="../images/shopping-list/black-cap.png" alt="Item 5">
-                            <img src="../images/shopping-list/black-front-sport-jacket.png" alt="Item 6">
-                            <img src="../images/shopping-list/black-front-sports-shorts.png" alt="Item 7">
-                            <img src="../images/shopping-list/black-front-sweater.png" alt="Item 8">
-                            <img src="../images/shopping-list/black-long-track-pants-and-shoes.png" alt="Item 9">
-                            <img src="../images/shopping-list/blank-green-sweatshirt.png" alt="Item 10">
-            
-                            <div class="number">11</div>
-                            <div class="number">12</div>
-                            <div class="number">13</div>
-                            <div class="number">14</div>
-                            <div class="number">15</div>
-                            <div class="number">16</div>
-                            <div class="number">17</div>
-                            <div class="number">18</div>
-                            <div class="number">19</div>
-                            <div class="number">20</div>
-                
-                            <div class="number">21</div>
-                            <div class="number">22</div>
-                            <div class="number">23</div>
-                            <div class="number">24</div>
-                            <div class="number">25</div>
-                            <div class="number">26</div>
-                            <div class="number">27</div>
-                            <div class="number">28</div>
-                            <div class="number">29</div>
-                            <div class="number">30</div>
-                            <div class="number">31</div>
-               
                 </div>
             </div>
         </section>
@@ -446,25 +443,25 @@
 
     <button class="go-back" onclick="window.history.back()">Go Back</button>
 
-        <footer>
-            <div class="footer-container">
-                <div class="footer-content">
-                    <h3>Contact Us</h3>
-                    <p class="contact">Email: <a href="mailto:info@example.com">info@example.com</a></p>
-                    <p class="contact">Phone: <a href="tel:+639322047101">+63 9322 047101</a></p>
-                    <p class="contact">Address: Dasmariñas, Cavite, Philippines</p>
-                </div>
-                <div class="footer-content">
-                    <h3>Quick Links</h3>
-                    <ul class="list">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="SignUp.html">Sign Up</a></li>
-                        <li><a href="Shop.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-content">
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p class="contact">Email: <a href="mailto:info@example.com">info@example.com</a></p>
+                <p class="contact">Phone: <a href="tel:+639322047101">+63 9322 047101</a></p>
+                <p class="contact">Address: Dasmariñas, Cavite, Philippines</p>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="SignUp.html">Sign Up</a></li>
+                    <li><a href="Shop.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
                     <h3>Follow Us</h3>
                     <h4 class="magpantay">Magpantay, Rae Aljon</h4>
                     <ul class="social-icons">
