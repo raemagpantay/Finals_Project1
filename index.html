@@ -270,10 +270,99 @@
             padding-top: 25%;
         }
 
-        /* slider media qu */
+        /* slider media queries */
         @media only screen and (max-width: 768px){
             
         }
+
+        @media only screen and (max-width: 1024px){
+
+            /* silder section */
+            .container-slider {
+                position: relative;
+                width: 50%;
+                height: 500px;
+                overflow: hidden;
+                padding: 20px;
+                margin: 40px auto;
+                margin-bottom: 0;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+            .slider-wrapper {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                width: 250%;
+            }
+            .slider {
+                min-width: 100%;
+                flex-shrink: 0;
+                width: 100;
+            }
+            .slider img {
+                width: 400px;
+                height: 500px;
+                object-fit: cover;
+            }
+            .slider-nav {
+                position: absolute;
+                bottom: 15px;
+                left: 55%;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 15px;
+                font-size: 24px;
+                padding: 20px;
+                cursor: pointer;
+            }
+            
+            /* 50% OFF */
+            .now{
+                font-family: "Roboto", sans-serif;
+                font-size: 20px;
+                font-weight: bold;
+                background: #2289e6;
+                width: 160px;
+                padding: 20px;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #fbf8f3;
+                border-radius: 5px;
+                cursor: pointer;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition-duration: 0.3s;
+                transition-property: box-shadow, transform;
+                border: 0;
+            }
+            .now{
+            margin: 5%;
+            }
+            .main-content{
+                margin: 0 auto;
+                padding-top: 60%;
+            }
+            /* logo */
+            .fifty-off {
+            text-align: center;
+            margin: 2rem 110px;
+            padding: 35px;
+            margin: 5%;
+            background-image: url('./images/halukay-logo.png');
+            background-size: 150%;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-top: 0;
+        }
+        /* 50 off sign */
+        .off{
+            font-family: "Roboto Flex", sans-serif;
+            font-weight: 500px;
+            font-size: 100px;
+            height: 100px;
+        }
+    }
         
         /* go-back button */
         .go-back {
